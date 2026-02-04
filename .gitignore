@@ -1,0 +1,10 @@
+/frontend/virtualEnv
+node_modules/
+dist/
+out-tsc/
+.angular/cache/
+.vscode/
+.idea/
+*.log
+.env
+.angular/

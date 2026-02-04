@@ -1,0 +1,160 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212; /* dark background */
+  color: #e5e7eb; /* light text */
+}
+
+/* Hero */
+.hero {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #2d333a, #3f4e58); /* dark gradient */
+  color: #f9fafb;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
+
+.hero .intro {
+  max-width: 600px;
+  margin: 1rem auto 2rem auto;
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.hero .contact {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn.primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: #f9fafb;
+  border: 2px solid #f9fafb;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Section Titles */
+.section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #374151; /* dark gray separator */
+  padding-bottom: 0.5rem;
+  color: #f9fafb;
+}
+
+/* Education & Experience Cards */
+.edu-card,
+.exp-card,
+.skill-category {
+  background-color: #1e1e2f; /* dark card background */
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.edu-card:hover,
+.exp-card:hover,
+.skill-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.exp-card h3,
+.edu-card h3,
+.skill-category strong {
+  color: #60a5fa; /* soft blue for headings */
+}
+
+.exp-card .date {
+  font-size: 0.85rem;
+  color: #9ca3af; /* light gray */
+}
+
+.exp-card ul,
+.edu-card p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  color: #d1d5db; /* softer text color */
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.skill-category {
+  color: #d1d5db;
+}
+
+/* Add subtle section background for alternating effect */
+.section:nth-child(even) {
+  background-color: #18181b;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 12px;
+}
