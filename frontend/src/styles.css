@@ -512,8 +512,9 @@ section {
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 800px) {
-    nav { padding: 16px 24px; }
-    .nav-links { gap: 20px; }
+    nav { padding: 20px 24px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.03em; }
 
     .hero {
     grid-template-columns: 1fr;
