@@ -354,6 +354,54 @@ section {
     transform: translate(3px, -3px);
 }
 
+/* ─── PROJECT IMAGES ─── */
+.project-images {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: space-evenly;
+}
+
+.project-img-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.project-img-thumb:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+/* ─── LIGHTBOX ─── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+}
+
 /* ─── EDUCATION ─── */
 .edu-grid {
     display: grid;
@@ -482,4 +530,15 @@ section {
 
     .contact-section { padding: 60px 24px; border-radius: 20px 20px 0 0; }
     .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+    .project-images {
+    justify-content: flex-start;
+    overflow-x: auto;
+}
+
+.project-img-thumb {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+}
 }

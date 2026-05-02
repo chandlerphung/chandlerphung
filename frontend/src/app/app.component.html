@@ -65,28 +65,34 @@
     <div class="projects-list">
 
       <div class="project-card reveal">
-        <div>
-          <p class="project-date">Mar 2026 – Apr 2026</p>
-          <h3 class="project-name">Song2Color</h3>
-          <div class="project-desc">
-            Music genre &amp; tag color visualization using generative AI.
-            <ul>
-              <li>Trained Word2Vec skip-gram models on Spotify co-occurrence data for 32-dim genre and 64-dim tag embeddings</li>
-              <li>Designed a VAE on 96-dim song vectors to learn a 16-dim latent space for smooth interpolation and novel color generation</li>
-              <li>Mapped embeddings to color via PCA-to-HSV projection so dissimilar genres produce maximally contrasting colors</li>
-              <li>Resolved posterior collapse via KL floor regularization and β-annealing</li>
-            </ul>
-          </div>
-          <div class="project-stack">
-            <span class="tag">PyTorch</span>
-            <span class="tag">Word2Vec</span>
-            <span class="tag">VAE</span>
-            <span class="tag tag-dark">Python</span>
-            <span class="tag tag-dark">UMAP</span>
-          </div>
-        </div>
-        <a href="https://github.com/melvinczyk/Song2Vec" target="_blank"><span class="project-arrow">↗</span></a>
-      </div>
+  <div>
+    <p class="project-date">Mar 2026 – Apr 2026</p>
+    <h3 class="project-name">Song2Color</h3>
+    <div class="project-desc">
+      Music genre &amp; tag color visualization using generative AI.
+      <ul>
+        <li>Trained Word2Vec skip-gram models on Spotify co-occurrence data for 32-dim genre and 64-dim tag embeddings</li>
+        <li>Designed a VAE on 96-dim song vectors to learn a 16-dim latent space for smooth interpolation and novel color generation</li>
+        <li>Mapped embeddings to color via PCA-to-HSV projection so dissimilar genres produce maximally contrasting colors</li>
+        <li>Resolved posterior collapse via KL floor regularization and β-annealing</li>
+      </ul>
+    </div>
+    <div class="project-images">
+      <img src="vae vs linear.gif" alt="VAE vs Linear" class="project-img-thumb" (click)="openLightbox($event)" />
+      <img src="linear vs latent.png" alt="Linear vs Latent" class="project-img-thumb" (click)="openLightbox($event)" />
+      <img src="tag_embedding_space.png" alt="Tag Embedding Space" class="project-img-thumb" (click)="openLightbox($event)" />
+      <img src="genre_embedding_space.png" alt="Genre Embedding Space" class="project-img-thumb" (click)="openLightbox($event)" />
+    </div>
+    <div class="project-stack">
+      <span class="tag">PyTorch</span>
+      <span class="tag">Word2Vec</span>
+      <span class="tag">VAE</span>
+      <span class="tag tag-dark">Python</span>
+      <span class="tag tag-dark">UMAP</span>
+    </div>
+  </div>
+  <a href="https://github.com/melvinczyk/Song2Vec" target="_blank"><span class="project-arrow">↗</span></a>
+</div>
 
       <div class="project-card reveal">
         <div>
@@ -274,6 +280,11 @@
         <span>Alabaster, AL · (626) 242-6210</span>
       </div>
     </section>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" (click)="closeLightbox()">
+    <img id="lightbox-img" src="" alt="" />
   </div>
 
   <script>
