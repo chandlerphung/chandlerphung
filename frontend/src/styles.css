@@ -528,8 +528,18 @@ section {
     section { padding: 60px 24px; }
     .divider { margin: 0 24px; }
 
-    .project-card { grid-template-columns: 1fr; padding: 28px; }
-    .project-arrow { display: none; }
+    .project-card {
+    grid-template-columns: 1fr;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card a:has(.project-arrow) {
+    align-self: flex-end;
+    margin-top: 12px;
+  }
+    .project-arrow { display: block; }
 
     .contact-section { padding: 60px 24px; border-radius: 20px 20px 0 0; }
     .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
