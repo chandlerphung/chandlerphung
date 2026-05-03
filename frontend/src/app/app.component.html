@@ -1,306 +1,442 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chandler Phung</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-  
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-name">Chandler Phung</a>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-<section class="hero">
-  <img src="cat.gif" alt="background" class="hero-bg-gif" />
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">MS Computer Science · UAB · Dec 2026</p>
-    <h1 class="hero-name">Hi, I'm<br><em>Chandler Phung!</em></h1>
-    <p class="hero-bio">
-      Graduate student at University of Alabama at Birmingham (UAB) with an interest in creating projects
-      within the field of machine learning, deep learning, and natural language processing!
-    </p>
-    <div class="hero-links">
-      <a href="Chandler_Resume.pdf" target="_blank" class="btn btn-outline">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        Resume
-      </a>
-      <a href="https://github.com/chandlerphung" target="_blank" class="btn btn-outline">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        GitHub
-      </a>
-      <a href="https://linkedin.com/in/chandler-phung-b0b269218" target="_blank" class="btn btn-outline">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-      <a href="mailto:chandlerphu@gmail.com" class="btn btn-outline">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Email
-      </a>
-    </div>
-  </div>
-</section>
-
-  <div class="divider"></div>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div >
-      <p class="section-label">Work</p>
-      <h2 class="section-title">Technical Projects</h2>
-    </div>
-    <div class="projects-list">
-
-      <div class="project-card reveal">
-  <div>
-    <p class="project-date">Mar 2026 – Apr 2026</p>
-    <h3 class="project-name">Song2Color</h3>
-    <div class="project-desc">
-      Music genre &amp; tag color visualization using generative AI.
-      <ul>
-        <li>Trained Word2Vec skip-gram models on Spotify co-occurrence data for 32-dim genre and 64-dim tag embeddings</li>
-        <li>Designed a VAE on 96-dim song vectors to learn a 16-dim latent space for smooth interpolation and novel color generation</li>
-        <li>Mapped embeddings to color via PCA-to-HSV projection so dissimilar genres produce maximally contrasting colors</li>
-        <li>Resolved posterior collapse via KL floor regularization and β-annealing</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chandler Phung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-name">Chandler Phung</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-    <div class="project-images">
-      <img src="vae vs linear.gif" alt="VAE vs Linear" class="project-img-thumb" (click)="openLightbox($event)" />
-      <img src="linear vs latent.png" alt="Linear vs Latent" class="project-img-thumb" (click)="openLightbox($event)" />
-      <img src="tag_embedding_space.png" alt="Tag Embedding Space" class="project-img-thumb" (click)="openLightbox($event)" />
-      <img src="genre_embedding_space.png" alt="Genre Embedding Space" class="project-img-thumb" (click)="openLightbox($event)" />
-    </div>
-    <div class="project-stack">
-      <span class="tag">PyTorch</span>
-      <span class="tag">Word2Vec</span>
-      <span class="tag">VAE</span>
-      <span class="tag tag-dark">Python</span>
-      <span class="tag tag-dark">UMAP</span>
-    </div>
-  </div>
-  <a href="https://github.com/melvinczyk/Song2Vec" target="_blank"><span class="project-arrow">↗</span></a>
-</div>
+    </nav>
 
-      <div class="project-card reveal">
-        <div>
-          <p class="project-date">Mar 2026 – Apr 2026</p>
-          <h3 class="project-name">F1 Lap Time Prediction</h3>
-          <div class="project-desc">
-            End-to-end LSTM regression model on Formula 1 telemetry data.
-            <ul>
-              <li>Built pipeline using FastF1 API to collect multi-season telemetry, engineering fixed-length time-series via distance-based resampling</li>
-              <li>Designed LSTM integrating track embeddings and weather features for multi-modal prediction</li>
-              <li>Implemented full ML pipeline with normalization, train/val/test splits, caching, and model checkpointing</li>
-            </ul>
-          </div>
-          <div class="project-stack">
-            <span class="tag">PyTorch</span>
-            <span class="tag">LSTM</span>
-            <span class="tag tag-dark">FastF1</span>
-            <span class="tag tag-dark">Python</span>
-          </div>
+    <!-- HERO -->
+    <section class="hero">
+      <img src="cat.gif" alt="background" class="hero-bg-gif" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">MS Computer Science · UAB · Dec 2026</p>
+        <h1 class="hero-name">Hi, I'm<br /><em>Chandler Phung!</em></h1>
+        <p class="hero-bio">
+          Graduate student at University of Alabama at Birmingham (UAB) with an interest in creating
+          projects within the field of machine learning, deep learning, and natural language
+          processing!
+        </p>
+        <div class="hero-links">
+          <a href="Chandler_Resume.pdf" target="_blank" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+            Resume
+          </a>
+          <a href="https://github.com/chandlerphung" target="_blank" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              />
+            </svg>
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/chandler-phung-b0b269218"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="mailto:chandlerphu@gmail.com" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            Email
+          </a>
         </div>
-        <a href="https://github.com/chandlerphung/f1_lstm" target="_blank"><span class="project-arrow">↗</span></a>
-      </div>
-
-      <div class="project-card reveal">
-        <div>
-          <p class="project-date">Dec 2025 – Feb 2026</p>
-          <h3 class="project-name">Alarmify</h3>
-          <div class="project-desc">
-            Spotify-powered alarm clock web application with full-stack cloud deployment.
-            <ul>
-              <li>Architected full-stack app integrating Spotify Web API with OAuth 2.0 for playlist-based alarms</li>
-              <li>Built Node.js/Express REST API with JWT auth, MongoDB + Mongoose, and cron-based Spotify playback scheduler</li>
-              <li>Deployed on AWS EC2 with Application Load Balancer, Route 53, and Certificate Manager for SSL/TLS</li>
-            </ul>
-          </div>
-          <div class="project-stack">
-            <span class="tag">Node.js</span>
-            <span class="tag">Express</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag tag-dark">AWS EC2</span>
-            <span class="tag tag-dark">OAuth 2.0</span>
-            <span class="tag tag-dark">Spotify API</span>
-          </div>
-        </div>
-        <a href="https://github.com/chandlerphung/spotify_alarm" target="_blank"><span class="project-arrow">↗</span></a>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div >
-      <p class="section-label">Toolbox</p>
-      <h2 class="section-title">Technical Skills</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <p class="skill-card-title">Languages</p>
-        <div class="skill-tags">
-          <span class="tag">Python</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Java</span>
-          <span class="tag">C/C++</span>
-          <span class="tag">SQL</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <p class="skill-card-title">ML & AI</p>
-        <div class="skill-tags">
-          <span class="tag">PyTorch</span>
-          <span class="tag">Scikit-learn</span>
-          <span class="tag">OpenCV</span>
-          <span class="tag">Computer Vision</span>
-          <span class="tag">NLP</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <p class="skill-card-title">Web Development</p>
-        <div class="skill-tags">
-          <span class="tag">React</span>
-          <span class="tag">Angular</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Express</span>
-          <span class="tag">Flask</span>
-          <span class="tag">FastAPI</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <p class="skill-card-title">Cloud & DevOps</p>
-        <div class="skill-tags">
-          <span class="tag">AWS EC2</span>
-          <span class="tag">Route 53</span>
-          <span class="tag">OAuth 2.0</span>
-          <span class="tag">Git</span>
-          <span class="tag">PM2</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <p class="skill-card-title">Data Science</p>
-        <div class="skill-tags">
-          <span class="tag">Pandas</span>
-          <span class="tag">NumPy</span>
-          <span class="tag">Matplotlib</span>
-          <span class="tag">Jupyter</span>
-          <span class="tag">Google Colab</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <p class="skill-card-title">Databases</p>
-        <div class="skill-tags">
-          <span class="tag">MongoDB</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">MongoDB Atlas</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <div >
-      <p class="section-label">Background</p>
-      <h2 class="section-title">Education</h2>
-    </div>
-    <div class="edu-grid">
-      <div class="edu-card reveal">
-        <h3 class="edu-degree">MS, Computer Science</h3>
-        <p class="edu-school">University of Alabama at Birmingham</p>
-        <p class="edu-date">Expected December 2026</p>
-        <div style="margin-top:14px;">
-          <div class="skill-tags">
-            <span class="tag tag-dark" style="font-size:0.72rem;">Machine Learning</span>
-            <span class="tag tag-dark" style="font-size:0.72rem;">NLP</span>
-            <span class="tag tag-dark" style="font-size:0.72rem;">Deep Learning</span>
-            <span class="tag tag-dark" style="font-size:0.72rem;">GPU Programming</span>
-          </div>
-        </div>
-      </div>
-      <div class="edu-card reveal">
-        <h3 class="edu-degree">BA, Computer Science</h3>
-        <p class="edu-school">University of Alabama at Birmingham</p>
-        <p class="edu-date">December 2024</p>
-      </div>
-      <div class="edu-card reveal">
-        <h3 class="edu-degree">BS, Kinesiology</h3>
-        <p class="edu-school">University of Alabama at Birmingham</p>
-        <p class="edu-date">May 2023 · Exercise Science</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT / FOOTER -->
-  <div style="max-width:1100px;margin:0 auto;padding:0 0;">
-    <section class="contact-section" id="contact">
-      <p class="section-label">Get In Touch</p>
-      <h2 class="section-title" style="font-family:'DM Serif Display',serif;">Let's build something!</h2>
-      <p class="contact-sub">Open to ML engineering, AI, and software engineering roles. Currently based in Alabama.</p>
-      <div class="contact-links">
-        <a href="mailto:chandlerphu@gmail.com" class="btn btn-ghost">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          chandlerphu@gmail.com
-        </a>
-        <a href="Chandler_Resume.pdf" target="_blank" class="btn btn-ghost">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Download Resume
-        </a>
-        <a href="https://github.com/chandlerphung" target="_blank" class="btn btn-ghost">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          GitHub
-        </a>
-        <a href="https://linkedin.com/in/chandler-phung-b0b269218" target="_blank" class="btn btn-ghost">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Chandler Phung</span>
-        <span>Alabaster, AL · (626) 242-6210</span>
       </div>
     </section>
-  </div>
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" (click)="closeLightbox()">
-    <img id="lightbox-img" src="" alt="" />
-  </div>
+    <div class="divider"></div>
 
-  <script>
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
-  </script>
-</body>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div>
+        <p class="section-label">Work</p>
+        <h2 class="section-title">Technical Projects</h2>
+      </div>
+      <div class="projects-list">
+        <div class="project-card reveal">
+          <div>
+            <p class="project-date">Mar 2026 – Apr 2026</p>
+            <h3 class="project-name">Song2Color</h3>
+            <div class="project-desc">
+              Music genre &amp; tag color visualization using generative AI.
+              <ul>
+                <li>
+                  Trained Word2Vec skip-gram models on Spotify co-occurrence data for 32-dim genre
+                  and 64-dim tag embeddings
+                </li>
+                <li>
+                  Designed a VAE on 96-dim song vectors to learn a 16-dim latent space for smooth
+                  interpolation and novel color generation
+                </li>
+                <li>
+                  Mapped embeddings to color via PCA-to-HSV projection so dissimilar genres produce
+                  maximally contrasting colors
+                </li>
+                <li>Resolved posterior collapse via KL floor regularization and β-annealing</li>
+              </ul>
+            </div>
+            <div class="project-images">
+              <img
+                src="vae vs linear.gif"
+                alt="VAE vs Linear"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+              <img
+                src="linear vs latent.png"
+                alt="Linear vs Latent"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+              <img
+                src="tag_embedding_space.png"
+                alt="Tag Embedding Space"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+              <img
+                src="genre_embedding_space.png"
+                alt="Genre Embedding Space"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+            </div>
+            <div class="project-stack">
+              <span class="tag">PyTorch</span>
+              <span class="tag">Word2Vec</span>
+              <span class="tag">VAE</span>
+              <span class="tag tag-dark">Python</span>
+              <span class="tag tag-dark">UMAP</span>
+            </div>
+          </div>
+          <a href="https://github.com/melvinczyk/Song2Vec" target="_blank"
+            ><span class="project-arrow">↗</span></a
+          >
+        </div>
+
+        <div class="project-card reveal">
+          <div>
+            <p class="project-date">Mar 2026 – Apr 2026</p>
+            <h3 class="project-name">F1 Lap Time Prediction</h3>
+            <div class="project-desc">
+              End-to-end LSTM regression model on Formula 1 telemetry data.
+              <ul>
+                <li>
+                  Built pipeline using FastF1 API to collect multi-season telemetry, engineering
+                  fixed-length time-series via distance-based resampling
+                </li>
+                <li>
+                  Designed LSTM integrating track embeddings and weather features for multi-modal
+                  prediction
+                </li>
+                <li>
+                  Implemented full ML pipeline with normalization, train/val/test splits, caching,
+                  and model checkpointing
+                </li>
+              </ul>
+            </div>
+            <div class="project-images">
+              <img
+                src="chart_ablation.png"
+                alt="chart_ablation"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+              <img
+                src="chart_rmse.png"
+                alt="chart_rmse"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+              <img
+                src="chart_scatter.png"
+                alt="chart_scatter"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+            </div>
+            <div class="project-stack">
+              <span class="tag">PyTorch</span>
+              <span class="tag">LSTM</span>
+              <span class="tag tag-dark">FastF1</span>
+              <span class="tag tag-dark">Python</span>
+            </div>
+          </div>
+          <a href="https://github.com/chandlerphung/f1_lstm" target="_blank"
+            ><span class="project-arrow">↗</span></a
+          >
+        </div>
+
+        <div class="project-card reveal">
+          <div>
+            <p class="project-date">Dec 2025 – Feb 2026</p>
+            <h3 class="project-name">Alarmify</h3>
+            <div class="project-desc">
+              Spotify-powered alarm clock web application with full-stack cloud deployment.
+              <ul>
+                <li>
+                  Architected full-stack app integrating Spotify Web API with OAuth 2.0 for
+                  playlist-based alarms
+                </li>
+                <li>
+                  Built Node.js/Express REST API with JWT auth, MongoDB + Mongoose, and cron-based
+                  Spotify playback scheduler
+                </li>
+                <li>
+                  Deployed on AWS EC2 with Application Load Balancer, Route 53, and Certificate
+                  Manager for SSL/TLS
+                </li>
+              </ul>
+            </div>
+            <div class="project-stack">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag tag-dark">AWS EC2</span>
+              <span class="tag tag-dark">OAuth 2.0</span>
+              <span class="tag tag-dark">Spotify API</span>
+            </div>
+          </div>
+          <a href="https://github.com/chandlerphung/spotify_alarm" target="_blank"
+            ><span class="project-arrow">↗</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div>
+        <p class="section-label">Toolbox</p>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <p class="skill-card-title">Languages</p>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Java</span>
+            <span class="tag">C/C++</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <p class="skill-card-title">ML & AI</p>
+          <div class="skill-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">NLP</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <p class="skill-card-title">Web Development</p>
+          <div class="skill-tags">
+            <span class="tag">React</span>
+            <span class="tag">Angular</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">Flask</span>
+            <span class="tag">FastAPI</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <p class="skill-card-title">Cloud & DevOps</p>
+          <div class="skill-tags">
+            <span class="tag">AWS EC2</span>
+            <span class="tag">Route 53</span>
+            <span class="tag">OAuth 2.0</span>
+            <span class="tag">Git</span>
+            <span class="tag">PM2</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <p class="skill-card-title">Data Science</p>
+          <div class="skill-tags">
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Jupyter</span>
+            <span class="tag">Google Colab</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <p class="skill-card-title">Databases</p>
+          <div class="skill-tags">
+            <span class="tag">MongoDB</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">MongoDB Atlas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div>
+        <p class="section-label">Background</p>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <h3 class="edu-degree">MS, Computer Science</h3>
+          <p class="edu-school">University of Alabama at Birmingham</p>
+          <p class="edu-date">Expected December 2026</p>
+          <div style="margin-top: 14px">
+            <div class="skill-tags">
+              <span class="tag tag-dark" style="font-size: 0.72rem">Machine Learning</span>
+              <span class="tag tag-dark" style="font-size: 0.72rem">NLP</span>
+              <span class="tag tag-dark" style="font-size: 0.72rem">Deep Learning</span>
+              <span class="tag tag-dark" style="font-size: 0.72rem">GPU Programming</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <h3 class="edu-degree">BA, Computer Science</h3>
+          <p class="edu-school">University of Alabama at Birmingham</p>
+          <p class="edu-date">December 2024</p>
+        </div>
+        <div class="edu-card reveal">
+          <h3 class="edu-degree">BS, Kinesiology</h3>
+          <p class="edu-school">University of Alabama at Birmingham</p>
+          <p class="edu-date">May 2023 · Exercise Science</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 0">
+      <section class="contact-section" id="contact">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title" style="font-family: 'DM Serif Display', serif">
+          Let's build something!
+        </h2>
+        <p class="contact-sub">
+          Open to ML engineering, AI, and software engineering roles. Currently based in Alabama.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:chandlerphu@gmail.com" class="btn btn-ghost">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              width="16"
+              height="16"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            chandlerphu@gmail.com
+          </a>
+          <a href="Chandler_Resume.pdf" target="_blank" class="btn btn-ghost">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              width="16"
+              height="16"
+            >
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+            Download Resume
+          </a>
+          <a href="https://github.com/chandlerphung" target="_blank" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              />
+            </svg>
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/chandler-phung-b0b269218"
+            target="_blank"
+            class="btn btn-ghost"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Chandler Phung</span>
+          <span>Alabaster, AL · (626) 242-6210</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" (click)="closeLightbox()">
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      // Scroll reveal
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => entry.target.classList.add('visible'), i * 80);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      reveals.forEach((el) => observer.observe(el));
+    </script>
+  </body>
 </html>
 
 <router-outlet />
