@@ -16,6 +16,7 @@
     <nav>
       <a href="#" class="nav-name">Chandler Phung</a>
       <ul class="nav-links">
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
@@ -79,6 +80,43 @@
     </section>
 
     <div class="divider"></div>
+
+    <div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div>
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Work Experience</h2>
+  </div>
+  <div class="projects-list">
+    <div class="project-card reveal">
+      <div>
+        <p class="project-date">January 2019 – Present</p>
+        <h3 class="project-name">Operations Manager | Software Developer</h3>
+        <p style="font-size:0.85rem; color:var(--ink-muted); margin-bottom:12px; font-style:italic;">Classic Nail Spa</p>
+        <div class="project-desc">
+          <ul>
+            <li>Architected a full-stack internal dashboard (Flask REST API + React/Recharts) visualizing live POS sales, employee revenue contribution, and shop KPIs — reverse-engineered the vendor SQLite schema without documentation to expose real-time endpoints aggregating nested JSON across multiple tables</li>
+            <li>Built an automated SMS marketing pipeline in Python: nightly cron queries the POS SQLite DB for upcoming customer birthdays, dispatches personalized messages via Twilio API, and logs delivery status — deployed as a persistent Windows service</li>
+            <li>Deployed React SPA on a Linux Linode server with Flask backend; configured CORS, React Router for client-side navigation, and PM2 for process management</li>
+          </ul>
+        </div>
+        <div class="project-stack">
+          <span class="tag">Flask</span>
+          <span class="tag">React</span>
+          <span class="tag">Python</span>
+          <span class="tag tag-dark">SQLite</span>
+          <span class="tag tag-dark">Twilio</span>
+          <span class="tag tag-dark">PM2</span>
+          <span class="tag tag-dark">Linode</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
 
     <!-- PROJECTS -->
     <section id="projects">
