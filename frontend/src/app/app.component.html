@@ -98,17 +98,38 @@
         <div class="project-desc">
           <ul>
             <li>Architected a full-stack internal dashboard (Flask REST API + React/Recharts) visualizing live POS sales, employee revenue contribution, and shop KPIs — reverse-engineered the vendor SQLite schema without documentation to expose real-time endpoints aggregating nested JSON across multiple tables</li>
+            <li>Deployed full-stack app on Linux Linode server using Docker and Docker Compose to containerize Flask and React services; configured UFW firewall, Linode network rules, and CORS policies for secure cross-origin communication</li>
+            <li>Built an automated database sync pipeline on the salon PC using Python and Windows Task Scheduler that detects POS SQLite changes and transfers only relevant tables to the remote server via SCP — keeping the live dashboard within 10 seconds of real transaction data</li>
             <li>Built an automated SMS marketing pipeline in Python: nightly cron queries the POS SQLite DB for upcoming customer birthdays, dispatches personalized messages via Twilio API, and logs delivery status — deployed as a persistent Windows service</li>
-            <li>Deployed React SPA on a Linux Linode server with Flask backend; configured CORS, React Router for client-side navigation, and PM2 for process management</li>
           </ul>
         </div>
+        <div class="project-images">
+              <img
+                src="shop_total.png"
+                alt="shop_total"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+              <img
+                src="sales.png"
+                alt="sales"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+              <img
+                src="employee_totals.png"
+                alt="employee_totals"
+                class="project-img-thumb"
+                (click)="openLightbox($event)"
+              />
+            </div>
         <div class="project-stack">
           <span class="tag">Flask</span>
           <span class="tag">React</span>
           <span class="tag">Python</span>
           <span class="tag tag-dark">SQLite</span>
           <span class="tag tag-dark">Twilio</span>
-          <span class="tag tag-dark">PM2</span>
+          <span class="tag tag-dark">Docker</span>
           <span class="tag tag-dark">Linode</span>
         </div>
       </div>
@@ -324,7 +345,7 @@
             <span class="tag">Route 53</span>
             <span class="tag">OAuth 2.0</span>
             <span class="tag">Git</span>
-            <span class="tag">PM2</span>
+            <span class="tag">Docker</span>
           </div>
         </div>
         <div class="skill-card reveal">
